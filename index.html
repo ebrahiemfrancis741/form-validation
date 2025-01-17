@@ -9,13 +9,14 @@
   <body>
     <form>
       <input type="email" id="formEmail" placeholder="Email" />
-      <input type="text" id="formCountry" placeholder="Country" />
-      <input type="text" id="formZipCode" placeholder="Zip Code" />
+      <input type="text" id="formCountry" placeholder="Country" pattern="[^\d]*"/>
+      <input type="text" id="formZipCode" placeholder="Zip Code" maxlength="4" minlength="4"/>
       <input
         type="password"
         required
         id="formPassword"
         placeholder="Password"
+        pattern="(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}"
       />
       <input
         type="password"
