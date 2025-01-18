@@ -1,0 +1,42 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 400px;
+  padding: 20px;
+  margin: 40px auto;
+  border: 1px solid grey;
+
+  >button{
+    padding: 4px;
+    width: 200px;
+    align-self: center;
+    border-radius: 8px;
+    border: 1px solid black;
+
+    &:hover{
+      background-color: rgb(187, 187, 187);
+    }
+  }
+
+  >input{
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid grey;
+
+    &:invalid{
+      border: 1px solid red;
+    }
+
+    &:valid{
+      border: 1px solid green;
+    }
+  }
+}
