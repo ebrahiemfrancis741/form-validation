@@ -8,36 +8,48 @@
   </head>
   <body>
     <form novalidate>
-      <div>
-        <input type="email" id="formEmail" placeholder="Email" required/>
-        <p id="formEmailMsg">message</p>
+      <div class="form-component">
+        <input type="email" id="formEmail" placeholder="Email" required />
+        <p id="formEmailMsg"></p>
       </div>
-      <div>
-        <input type="text" id="formCountry" placeholder="Country" pattern="[a-zA-Z]"/>
-        <p id="formCountryMsg">message</p>
-      </div>
-      <div>
-        <input type="text" id="formZipCode" placeholder="Zip Code" maxlength="4" minlength="4"/>
-        <p id="formZipCodeMsg">message</p>
-      </div>
-      <div>
+      <div class="form-component">
         <input
-        type="password"
-        required
-        id="formPassword"
-        placeholder="Password"
-        pattern="(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}"
-      />
-      <p id="formPasswordMsg">message</p>
+          type="text"
+          id="formCountry"
+          placeholder="Country"
+          pattern="[a-zA-Z]*"
+          minlength="4"
+        />
+        <p id="formCountryMsg"></p>
       </div>
-      <div>
+      <div class="form-component">
         <input
-        type="password"
-        required
-        id="formPasswordConfirm"
-        placeholder="Confirm Password"
-      />
-      <p id="formPasswordConfirmMsg">message</p>
+          type="text"
+          id="formZipCode"
+          placeholder="Zip Code"
+          maxlength="4"
+          minlength="4"
+        />
+        <p id="formZipCodeMsg"></p>
+      </div>
+      <div class="form-component">
+        <input
+          type="password"
+          required
+          id="formPassword"
+          placeholder="Password"
+          pattern="(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}"
+        />
+        <p id="formPasswordMsg"></p>
+      </div>
+      <div class="form-component">
+        <input
+          type="password"
+          required
+          id="formPasswordConfirm"
+          placeholder="Confirm Password"
+        />
+        <p id="formPasswordConfirmMsg"></p>
       </div>
       <button type="submit" id="btnSubmit">Submit</button>
     </form>

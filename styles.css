@@ -1,42 +1,58 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-form{
+:root {
+  font-family: sans-serif;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
   width: 400px;
   padding: 20px;
   margin: 40px auto;
   border: 1px solid grey;
 
-  >button{
+  > button {
     padding: 4px;
     width: 200px;
     align-self: center;
     border-radius: 8px;
     border: 1px solid black;
 
-    &:hover{
+    &:hover {
       background-color: rgb(187, 187, 187);
     }
   }
 
-  >input{
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid grey;
+  > div.form-component {
+    > input {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid grey;
+      width: 100%;
+      letter-spacing: 0.02rem;
 
-    &:invalid{
-      border: 1px solid red;
+      &:invalid {
+        border: 1px solid red;
+      }
+
+      &:valid {
+        border: 1px solid green;
+      }
     }
 
-    &:valid{
-      border: 1px solid green;
+    > p {
+      margin-top: 4px;
+      margin-left: 8px;
+      font-size: 0.75rem;
+      letter-spacing: 0.02rem;
+      width: 100%;
+      height: 16px;
     }
   }
 }
