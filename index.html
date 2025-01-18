@@ -8,22 +8,37 @@
   </head>
   <body>
     <form novalidate>
-      <input type="email" id="formEmail" placeholder="Email" required/>
-      <input type="text" id="formCountry" placeholder="Country" pattern="[a-zA-Z]"/>
-      <input type="text" id="formZipCode" placeholder="Zip Code" maxlength="4" minlength="4"/>
-      <input
+      <div>
+        <input type="email" id="formEmail" placeholder="Email" required/>
+        <p id="formEmailMsg">message</p>
+      </div>
+      <div>
+        <input type="text" id="formCountry" placeholder="Country" pattern="[a-zA-Z]"/>
+        <p id="formCountryMsg">message</p>
+      </div>
+      <div>
+        <input type="text" id="formZipCode" placeholder="Zip Code" maxlength="4" minlength="4"/>
+        <p id="formZipCodeMsg">message</p>
+      </div>
+      <div>
+        <input
         type="password"
         required
         id="formPassword"
         placeholder="Password"
         pattern="(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}"
       />
-      <input
+      <p id="formPasswordMsg">message</p>
+      </div>
+      <div>
+        <input
         type="password"
         required
         id="formPasswordConfirm"
         placeholder="Confirm Password"
       />
+      <p id="formPasswordConfirmMsg">message</p>
+      </div>
       <button type="submit" id="btnSubmit">Submit</button>
     </form>
     <script src="main.js"></script>
