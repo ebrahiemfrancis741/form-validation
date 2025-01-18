@@ -25,6 +25,15 @@ function formCountryEventListener(event) {
   }
 }
 
+function formZipCodeEventListener(event){
+  let formZipCodeMsg = document.querySelector("#formZipCodeMsg");
+  if (!event.target.checkValidity()) {
+    formZipCodeMsg.textContent = "Zip code requires four numbers";
+  } else {
+    formZipCodeMsg.textContent = "";
+  }
+}
+
 function main() {
   let btnSubmit = document.querySelector("#btnSubmit");
   btnSubmit.addEventListener("click", btnSubmitEventHandler);
@@ -34,6 +43,9 @@ function main() {
 
   let formCountry = document.querySelector("#formCountry");
   formCountry.addEventListener("input", formCountryEventListener);
+
+  let formZipCode = document.querySelector("#formZipCode");
+  formZipCode.addEventListener("input", formZipCodeEventListener);
 }
 
 main();
