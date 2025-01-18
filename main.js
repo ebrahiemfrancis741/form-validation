@@ -44,6 +44,24 @@ function formPasswordEventListener(event) {
   }
 }
 
+function formPasswordConfirmEventListener(event) {
+  let formPasswordConfirmMsg = document.querySelector(
+    "#formPasswordConfirmMsg"
+  );
+  let formPasswordConfirm = document.querySelector("#formPasswordConfirm");
+  let formPassword = document.querySelector("#formPassword");
+  // console.log(`pass: ${formPassword.value}, confirm: ${formPasswordConfirm.value}`);
+  if (formPasswordConfirm.value != formPassword.value) {
+    formPasswordConfirm.setCustomValidity("Passwords do not match");
+    formPasswordConfirmMsg.textContent =
+      formPasswordConfirm.validationMessage;
+  } else {
+    formPasswordConfirm.setCustomValidity("");
+    formPasswordConfirmMsg.textContent =
+      formPasswordConfirm.validationMessage;
+  }
+}
+
 function main() {
   let btnSubmit = document.querySelector("#btnSubmit");
   btnSubmit.addEventListener("click", btnSubmitEventHandler);
@@ -59,6 +77,12 @@ function main() {
 
   let formPassword = document.querySelector("#formPassword");
   formPassword.addEventListener("input", formPasswordEventListener);
+
+  let formPasswordConfirm = document.querySelector("#formPasswordConfirm");
+  formPasswordConfirm.addEventListener(
+    "input",
+    formPasswordConfirmEventListener
+  );
 }
 
 main();
