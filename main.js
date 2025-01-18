@@ -25,12 +25,22 @@ function formCountryEventListener(event) {
   }
 }
 
-function formZipCodeEventListener(event){
+function formZipCodeEventListener(event) {
   let formZipCodeMsg = document.querySelector("#formZipCodeMsg");
   if (!event.target.checkValidity()) {
     formZipCodeMsg.textContent = "Zip code requires four numbers";
   } else {
     formZipCodeMsg.textContent = "";
+  }
+}
+
+function formPasswordEventListener(event) {
+  let formPasswordMsg = document.querySelector("#formPasswordMsg");
+  if (!event.target.checkValidity()) {
+    formPasswordMsg.textContent =
+      "Password requires atleast 1 special character, 1 uppercase letter, 1 lowercase letter, 1 number and must have a length of 8";
+  } else {
+    formPasswordMsg.textContent = "";
   }
 }
 
@@ -46,6 +56,9 @@ function main() {
 
   let formZipCode = document.querySelector("#formZipCode");
   formZipCode.addEventListener("input", formZipCodeEventListener);
+
+  let formPassword = document.querySelector("#formPassword");
+  formPassword.addEventListener("input", formPasswordEventListener);
 }
 
 main();
